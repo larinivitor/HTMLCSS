@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #29323e;
+    width: 280px;
+}
+
+.header {
+    background: #ffa401;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0px;
+    font-weight: 300;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li a {
+    padding: 15px 0 15px 60px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    position: relative;
+}
+
+.menu li a img {
+    height: 25px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu li:not(.menu-active) a:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.menu-active {
+    background: rgba(0, 0, 0, 0.3);
+    border-right: 4px solid #ffa401;
+}
+
+.content {
+    padding-left: 300px;
+    height: 200vh;
+}
+
+@media (max-width: 500px) {
+    .content {
+        padding-left: 90px;
+    }
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .menu li a {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .menu li a img {
+        display: inline-block;
+        position: static;
+        transform: unset;
+    }    
+
+    .menu li a span {
+        display: none;
+    }
+}
